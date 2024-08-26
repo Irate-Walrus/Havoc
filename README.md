@@ -87,3 +87,9 @@ To contribute to the Havoc Framework, please review the guidelines in [Contribut
 Please do not open any issues regarding detection. 
 
 The Havoc Framework hasn't been developed to be evasive. Rather it has been designed to be as malleable & modular as possible. Giving the operator the capability to add custom features or modules that evades their targets detection system. 
+
+### To build this locally as a deb package
+
+```sh
+dpkg-buildpackage -b -rfakeroot -us -uc
+```
