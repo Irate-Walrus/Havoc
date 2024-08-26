@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+export GOCACHE=$(CURDIR)/build
+export GOPATH=$(CURDIR)/build
+
+%:
+	dh $@

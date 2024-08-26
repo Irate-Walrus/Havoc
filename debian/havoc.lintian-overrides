@@ -1,0 +1,8 @@
+havoc: arch-dependent-file-in-usr-share [usr/share/havoc/*]
+havoc: arch-dep-package-has-big-usr-share
+havoc: file-references-package-build-path [usr/share/havoc/client/Havoc]
+havoc: file-references-package-build-path [usr/share/havoc/havoc]
+havoc: package-contains-documentation-outside-usr-share-doc [usr/share/havoc/payloads/Demon/CMakeLists.txt]
+havoc: package-contains-documentation-outside-usr-share-doc [usr/share/havoc/payloads/Demon/README.md]
+havoc: package-contains-vcs-control-file [usr/share/havoc/payloads/Shellcode/Bin/.gitignore]
+havoc: spelling-error-in-binary * [usr/share/havoc/havoc]

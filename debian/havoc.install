@@ -1,0 +1,3 @@
+client/Havoc client/config.toml client/Modules usr/share/havoc/client/
+data havoc payloads profiles usr/share/havoc/
+debian/helper-script/havoc usr/bin/

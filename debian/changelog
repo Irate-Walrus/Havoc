@@ -1,0 +1,25 @@
+havoc (0.6~git20231206.ea3646e-0kali1) kali-dev; urgency=medium
+
+  * New upstream version 0.6~git20231206.ea3646e
+  * Refresh patches
+  * Copy config file
+  * Refresh patches
+
+ -- Daniel Ruiz de Alegría <daniruiz@kali.org>  Sat, 09 Dec 2023 14:24:03 +0100
+
+havoc (0.6~git20231012.08a8826-0kali1) kali-dev; urgency=medium
+
+  * Disable arm architectures in gitlab CI
+  * Disable i386 architecture as it fails to build
+  * Disable i386 in CI too
+  * Fix monospace font using CSS instead of hardcoded font
+  * Use version number 0.6 in watch file
+  * New upstream version 0.6~git20231012.08a8826
+
+ -- Daniel Ruiz de Alegría <daniruiz@kali.org>  Thu, 19 Oct 2023 11:12:06 +0200
+
+havoc (0.0~git20230813.c393115-0kali1) kali-dev; urgency=medium
+
+  * Initial release
+
+ -- Daniel Ruiz de Alegría <daniruiz@kali.org>  Mon, 16 Oct 2023 19:45:25 +0200

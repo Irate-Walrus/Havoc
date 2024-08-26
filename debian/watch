@@ -1,0 +1,3 @@
+version=4
+opts="mode=git, pgpmode=none, pretty=0.6~git%cd.%h" \
+  https://github.com/HavocFramework/Havoc HEAD

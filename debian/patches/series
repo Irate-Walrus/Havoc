@@ -1,0 +1,3 @@
+use-same-default-password.patch
+fix-relative-paths.patch
+fix-makefile.patch

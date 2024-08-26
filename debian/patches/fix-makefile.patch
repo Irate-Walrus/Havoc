@@ -1,0 +1,34 @@
+--- a/makefile
++++ b/makefile
+@@ -8,9 +8,9 @@
+ # teamserver building target
+ ts-build:
+ 	@ echo "[*] building teamserver"
+-	@ ./teamserver/Install.sh
++#	@ ./teamserver/Install.sh
+ 	@ cd teamserver; GO111MODULE="on" go build -ldflags="-s -w -X cmd.VersionCommit=$(git rev-parse HEAD)" -o ../havoc main.go
+-	@ sudo setcap 'cap_net_bind_service=+ep' havoc # this allows you to run the server as a regular user
++#	@ sudo setcap 'cap_net_bind_service=+ep' havoc # this allows you to run the server as a regular user
+ 
+ dev-ts-compile:
+ 	@ echo "[*] compile teamserver"
+@@ -29,9 +29,17 @@
+ # client building and cleanup targets 
+ client-build: 
+ 	@ echo "[*] building client"
+-	@ git submodule update --init --recursive
++	@ git clone https://github.com/gabime/spdlog client/external/spdlog && \
++	cd client/external/spdlog && \
++	git fetch && git reset --hard ac55e60488032b9acde8940a5de099541c4515da
++	@ git clone https://github.com/nlohmann/json client/external/json && \
++	cd client/external/json && \
++	git fetch && git reset --hard 6eab7a2b187b10b2494e39c1961750bfd1bda500
++	@ git clone https://github.com/ToruNiina/toml11 client/external/toml && \
++	cd client/external/toml && \
++	git fetch && git reset --hard c32a20e1ee690d6e6bf6f37e6d603402d49b15f0
+ 	@ mkdir client/Build; cd client/Build; cmake ..
+-	@ if [ -d "client/Modules" ]; then echo "Modules installed"; else git clone https://github.com/HavocFramework/Modules client/Modules --single-branch --branch `git rev-parse --abbrev-ref HEAD`; fi
++	@ if [ -d "client/Modules" ]; then echo "Modules installed"; else git clone https://github.com/HavocFramework/Modules client/Modules --single-branch --branch main; fi
+ 	@ cmake --build client/Build -- -j 4
+ 
+ client-cleanup:

@@ -1,0 +1,32 @@
+Source: havoc
+Section: utils
+Priority: optional
+Maintainer: Kali Developers <devel@kali.org>
+Uploaders:
+ Daniel Ruiz de Alegría <daniruiz@kali.org>,
+Rules-Requires-Root: no
+Build-Depends:
+ ca-certificates,
+ cmake,
+ debhelper-compat (= 13),
+ git,
+ golang-go,
+ libqt5websockets5-dev,
+ libspdlog-dev,
+ python3-dev,
+ qtbase5-dev,
+Standards-Version: 4.6.2
+Homepage: https://github.com/HavocFramework/Havoc
+Vcs-Browser: https://gitlab.com/kalilinux/packages/havoc
+Vcs-Git: https://gitlab.com/kalilinux/packages/havoc.git
+
+Package: havoc
+Architecture: amd64
+Depends:
+ gcc-mingw-w64-i686-win32,
+ gcc-mingw-w64-x86-64-win32,
+ nasm,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Modern and malleable post-exploitation C2 framework
+ Havoc is a modern and malleable post-exploitation command and control framework
