@@ -12,11 +12,12 @@
  
  dev-ts-compile:
  	@ echo "[*] compile teamserver"
-@@ -29,9 +29,17 @@
+@@ -29,9 +29,18 @@
  # client building and cleanup targets 
  client-build: 
  	@ echo "[*] building client"
 -	@ git submodule update --init --recursive
++	@ rm -rf client/external
 +	@ git clone https://github.com/gabime/spdlog client/external/spdlog && \
 +	cd client/external/spdlog && \
 +	git fetch && git reset --hard ac55e60488032b9acde8940a5de099541c4515da
