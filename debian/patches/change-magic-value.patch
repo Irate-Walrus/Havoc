@@ -1,0 +1,24 @@
+--- a/payloads/Demon/include/common/Defines.h
++++ b/payloads/Demon/include/common/Defines.h
+@@ -12,7 +12,7 @@
+ #define PROCESS_AGENT_ARCH PROCESS_ARCH_X86
+ #endif
+ 
+-#define DEMON_MAGIC_VALUE 0xDEADBEEF
++#define DEMON_MAGIC_VALUE 0xIRATEPWN
+ 
+ #define WIN_VERSION_UNKNOWN 0
+ #define WIN_VERSION_XP      1
+diff --git a/teamserver/pkg/agent/commands.go b/teamserver/pkg/agent/commands.go
+index 09ab8bf..68cdace 100644
+--- a/teamserver/pkg/agent/commands.go
++++ b/teamserver/pkg/agent/commands.go
+@@ -1,7 +1,7 @@
+ package agent
+ 
+ const (
+-       DEMON_MAGIC_VALUE = 0xDEADBEEF
++       DEMON_MAGIC_VALUE = 0xIRATEPWN
+ )
+ 
+ const (
